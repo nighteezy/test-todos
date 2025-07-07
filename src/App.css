@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f5f5f5;
+  color: #4d4d4d;
+  font-size: 16px;
+}
+
+.app {
+  max-width: 550px;
+  width: 100%;
+  margin: 50px auto;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 25px 50px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+  margin: 0 0 20px;
+}
+
+.input-container {
+  width: 100%;
+  border-bottom: 1px solid #606370;
+}
+
+.input-container input {
+  width: 100%;
+  font-size: 24px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-style: italic;
+  color: #4d4d4d;
+}
+
+input::placeholder {
+  color: #d9d9d9;
+  font-style: italic;
+  opacity: 1;
+}
+
+.input-container button {
+  display: none;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list li {
+  padding: 16px 16px 16px 60px;
+  border-bottom: 1px solid #ededed;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-list li.done {
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+
+.todo-list li::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: none;
+}
+
+.todo-list li.done::before {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%2399cc33" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  border-color: #99cc33;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #777;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex: 1;
+}
+
+.filters button {
+  border: 1px solid transparent;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #777;
+  transition: border-color 0.2s ease;
+}
+
+.filters button:hover {
+  border-color: #d6d6d6;
+}
+
+.filters .active {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.clear-btn:hover {
+  color: #333;
+}
