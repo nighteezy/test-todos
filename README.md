@@ -27,3 +27,5 @@ npm i && npm run start
 ```
 
 Проект откроется по адресу: http://localhost:5173
+
+Vercel: https://test-todos-git-main-nighteezys-projects.vercel.app
